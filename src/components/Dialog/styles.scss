@@ -1,0 +1,70 @@
+.dialog {
+  padding: 10px;
+  background-color: rgb(198, 198, 198);
+  border-radius: 8px;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  z-index: 100;
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: grab;
+    color: #242424;
+
+    & .header-icon {
+      margin-top: 2px;
+      margin-right: 6px;
+    }
+
+    & button {
+      padding: 2px;
+      font-family: Tahoma, Arial, Helvetica, sans-serif;
+      font-weight: inherit;
+      line-height: 0.7;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: 2px solid #242424;
+      color: #242424;
+      border-radius: 3px;
+
+      &:hover {
+        border-color: #c80000;
+        color: #c80000;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .dialog-content {
+    display: block;
+    min-width: 150px;
+    min-height: 200px;
+  }
+
+  &-resizeable {
+    padding-bottom: 10px;
+    overflow: auto;
+    cursor: grab;
+
+    &.resize-x {
+      resize: horizontal;
+    }
+
+    &.resize-y {
+      resize: vertical;
+    }
+
+    &.resize-xy {
+      resize: both;
+    }
+  }
+}
